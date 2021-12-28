@@ -1,0 +1,451 @@
+{
+    "pwn": [
+        {
+            "name": "simple",
+            "description": "Simple game right?\n\n`nc challs.sieberrsec.tech 8862`\n\n[SOURCE CODE]",
+            "author": "chowgz",
+            "hints": [],
+            "points": 62,
+            "solves": 47,
+            "flag": "IRS{W377_D0NE_40U_G3N1u5_WBVAVEF}"
+        },
+        {
+            "name": "warmup",
+            "description": "Just a warmup. `nc challs.sieberrsec.tech 3476`\n\n[SOURCE CODE]\n\nN.B. please do not try to bruteforce the flag. Attempts at doing so will be taken as an attack on server infrastructure, and will leave you liable for disqualification.",
+            "author": "main",
+            "hints": [
+                "https://ctf101.org/binary-exploitation/buffer-overflow/",
+                "https://en.wikipedia.org/wiki/Null-terminated_string"
+            ],
+            "points": 316,
+            "solves": 17,
+            "flag": "IRS{nU1L_t3rminat0r}"
+        },
+        {
+            "name": "malloc",
+            "description": "Can you somehow get the flag? Have fun!\n\n`nc challs.sieberrsec.tech 1470`\n\n[SOURCE CODE]",
+            "author": "chowgz",
+            "hints": [],
+            "points": 400,
+            "solves": 2,
+            "flag": ""
+        },
+        {
+            "name": "rock farm simulator 2011",
+            "description": "Rocks, ponies, and all the time in the world! Can you get the Princess' flag?\n\n`ssh -p 15233 rock_farming_simulator@challs.sieberrsec.tech`\n\nSource code can be found [here](https://drive.google.com/uc?id=14u8ggvJEZxHMwIaFBFsw2YqmP-DVHfiH&export=download)\n\n\n\nA notice from README.md:\n\n````ssh` is solely used here to allocate a pseudo-tty to make the ncurses-based UI work properly.\n\n**There is no ssh jailbreak, Linux pentesting, username bruteforcing**, etc. involved in this challenge.\n\nIf you waste your time doing so, it will be considered an attack on server infrastructure && consequently a _valid reason for disqualification_.```",
+            "author": "main",
+            "hints": [
+                "You may want to try compiling & running the program yourself; the binary given was compiled without Rust's default debug features.",
+                "You probably don't want to write a script for this one.",
+                "The challenge `simple` was released at the same time for a reason."
+            ],
+            "points": 799,
+            "solves": 2,
+            "flag": "IRS{so_long_space_pony}"
+        },
+        {
+            "name": "Turbo Fast Crypto, part 2",
+            "description": "Using the key you extracted, we found a (link)[https://drive.google.com/uc?id=19mmImjpreALZSs0D88BtLY65cFBkHsMC&export=download] to the source code for turbofastcrypto. There happens to be a secret flag file on the server, and you need to extract it.\n\n**A first blood prize of one (1) month of Discord Nitro is available for this challenge.**\n\n(the target server is the same as part 1)",
+            "author": "main",
+            "hints": [
+                "find a way to execute print_flag()",
+                "you will probably want some kind of disassembler/debugger for this. Googlable software: Binary Ninja, Ghidra, gdb"
+            ],
+            "points": 900,
+            "solves": 1,
+            "flag": ""
+        }
+    ],
+    "crypto": [
+        {
+            "name": "Shalom Shalom",
+            "description": "AT least my mom will let me play cake BASH with my friends if i finish my cryptography homework, can you help me decode it:\nxibkgltizksbrhxllo\nwrap the flag header around the decoded message, i.e. IRS{decoded_message}",
+            "author": "noyou",
+            "hints": [
+                "The hint is in the description"
+            ],
+            "points": 50,
+            "solves": 55,
+            "flag": "IRS{cryptographyiscool}"
+        },
+        {
+            "name": "Turbo Fast Crypto, part 1",
+            "description": "We found the frontend code for a remote encryption service at `nc challs.sieberrsec.tech 3477`:\n\n[SOURCE CODE]\nMy partner says it operates under the hood with \"[XOR](https://en.wikipedia.org/wiki/Exclusive_or)\", whatever that means. I need you to recover the key.",
+            "author": "main",
+            "hints": [
+                "Reset the connection if you're having trouble."
+            ],
+            "points": 117,
+            "solves": 29,
+            "flag": "IRS{secrets_are_revealed!!}"
+        },
+        {
+            "name": "I can't open this file? Part 2",
+            "description": "Thanks for helping me recover that file, now I have another [file](https://drive.google.com/uc?id=116Rz1ZxPHo8WLLJ2tLEFe3eNNN_Ybc7y&export=download) but it has been [encrypted](https://drive.google.com/file/d/1guL0UY1-QMAeJ6hSiO2TsTixU-7Qb_fJ/view) into something entirely different. Think you can help me again?",
+            "author": "origami10004",
+            "hints": [],
+            "points": 189,
+            "solves": 14,
+            "flag": ""
+        },
+        {
+            "name": "Diffie's Key Exchange",
+            "description": "Diffie created a new key exchange system to help securely transfer private keys in a public channel. Can you see whats wrong with his system?\nConnect here: `nc challs.sieberrsec.tech 1337`\n[chall.py](https://drive.google.com/file/d/1eDDjWOaS_LlAheC1GJUqPoethwgI-NWW/view)",
+            "author": "noyou",
+            "hints": [
+                "Does the name Diffie sound familiar? Goolge is your best friend!!"
+            ],
+            "points": 192,
+            "solves": 27,
+            "flag": "IRS{d1ff1e_h311m4n!!!}"
+        },
+        {
+            "name": "I can't open this file? Part 1",
+            "description": "Oh no, I've encrypted a file and deleted the original! Now I have a [file](https://drive.google.com/uc?id=1RxVhP6RG7sA9pH7cp2a1HGc4nS5YNQ_D&export=download) that is filled with rubbish. Thankfully I still have the encryption [script](https://drive.google.com/file/d/1GIBfeCjmx3qscYDFHuZ9Se2L8NYybk2I/view), help me recover the original file! I'll even give you a flag if you do.",
+            "author": "origami10004",
+            "hints": [],
+            "points": 210,
+            "solves": 30,
+            "flag": "IRS{n0w_y0u_c4n_c0d3}"
+        },
+        {
+            "name": "totallyfoolproofcrypto",
+            "description": "In hindsight, rolling my own crypto was a rather stupendous stroke of stupidity. I'll be switching to a [well-known, verified library](https://www.pycryptodome.org/en/latest/) to fix this.\n\n[SOURCE CODE]\n`nc challs.sieberrsec.tech 31311`\n\n**A first blood prize of one (1) month of Discord Nitro is available for this challenge.**\n\nSome amount of \"bruteforce\" will be necessary -- and hence legal -- for this challenge.",
+            "author": "main",
+            "hints": [
+                "You should search for ECB related AES crypto CTF problems; this is a rather common newbie challenge"
+            ],
+            "points": 884,
+            "solves": 7,
+            "flag": ""
+        },
+        {
+            "name": "Diffie's Key Exchange 2",
+            "description": "Diffie learnt that his implementation of the system wasn't secure :<< and made some changes. Try it now!\nConnect here: `nc challs.sieberrsec.tech 1338`\n[chall.py](https://drive.google.com/file/d/1u7H3Ej2dv1AsWNKVQXO5EhUOsnVt_zR3/view)",
+            "author": "noyou",
+            "hints": [],
+            "points": 895,
+            "solves": 4,
+            "flag": ""
+        },
+        {
+            "name": "whodunnit",
+            "description": "The Association of Criminals, Subversives and Insurgents (ACSI, in short) are big fans of [RSA encryption](https://en.wikipedia.org/wiki/RSA_(cryptosystem)), and recently published a [list of their members' public keys](https://drive.google.com/uc?id=19mXJh_4NNZQsbGegvEJHF87tnQiQqIKX&export=download). For reasons unbeknownst to us, they have a habit of **signing** their messages with **multiple** private keys before **encrypting** the signed message with a **single** public key.\n\nUsing one of our portable False Base Stations, we [captured](https://drive.google.com/file/d/1eabGvwCiTVRwlYJritB2qXeBvvNGi6J1/view) one of ASCI's **encrypted**, **doubly-signed**, super secret **alphabetic** passwords (along with the public key used to encrypt it). We need you to figure out **who signed the password**, and **what the password** is by decrypting && unsigning the captured RSA transmission.\n\nFlag format: `IRS{Name of first person to sign_Name of second person to sign_The password}`\n\n*Challenge description extemporised by @main*",
+            "author": "seemin",
+            "hints": [
+                "[Encryption: M^e % n = C] [Decryption: C^d % n = M] [Signing: M^d % n = S] [Unsigning S: S^e % n = M]",
+                "Obtaining a decryption key (d) is not necessary at any point in this challenge.",
+                "try to read the bolded words"
+            ],
+            "points": 895,
+            "solves": 4,
+            "flag": ""
+        }
+    ],
+    "re": [
+        {
+            "name": "Flag checker",
+            "description": "[http://challs.sieberrsec.tech:15231](http://challs.sieberrsec.tech:15231)\n\n**Note**: There is **no reason** to use bruteforce for this challenge.",
+            "author": "main",
+            "hints": [
+                "right click --> inspect element"
+            ],
+            "points": 50,
+            "solves": 58,
+            "flag": "IRS{insp3ct_e1ement}"
+        },
+        {
+            "name": "Reverse",
+            "description": "Reverse Engineering but in python?!!!\n[reverse.py](https://drive.google.com/file/d/1yhMvtjck8wJ43c8XL7qIJ6-NpKO_28L0/view)",
+            "author": "noyou",
+            "hints": [
+                "you don't need to reverse the entire script"
+            ],
+            "points": 164,
+            "solves": 37,
+            "flag": "IRS{805b41736b4d43ebb15fc1}"
+        },
+        {
+            "name": "Flag checker v2.0",
+            "description": "Same interface, another `check_flag()`.\n\nEasy, right?\n\n[http://challs.sieberrsec.tech:15232/](http://challs.sieberrsec.tech:15232/)\n\n**A first blood prize of [any Steam game that costs <= S$15] is available for this challenge.**",
+            "author": "main",
+            "hints": [
+                "https://github.com/WebAssembly/wabt might be a good starting point."
+            ],
+            "points": 899,
+            "solves": 2,
+            "flag": ""
+        }
+    ],
+    "osint": [
+        {
+            "name": "\"The Sieberr\" Heist Part 1",
+            "description": "Well, boss instructed me not to reveal much, but we're planning some heist and I need your help.\n\nOne of our men tailed someone to their home quite a while back.\n\nHe discreetly took a quick picture to mark the location of the person's house.\n\nPlease help me determine the location.\n\n*(Actually, the heist was planned to be carried out sometime then, but due to unforeseen circumstances it was delayed and we are now revisiting the resources we had obtained back then).*\n---\nSubmit the flag as IRS{*A*_*B*_*C*_*D*_*E*}\nwhere:\n\nA. Unit Number *(without any spacing and numbers only)*\n\nB. Street Name *(without any spacing and in all capitals)* [e.g. If the road name is \"John Rd\", input as \"JOHNRD\"; \"John St\" > \"JOHNST\"]\n\nC. Locality Name *(without any spacing and in all capitals)*\n\nD. Postcode *(numbers only)*\n\nE. Number of Storeys of the House *(without any spacing and numbers only)*\n\n[the_sieberr_heist_part1.jpg](https://drive.google.com/uc?id=12OAxXXD9aIKnHIffOnKPaoIymXkmiUoc&export=download)\n---\nAddendum for \"The Sieberr\" Heist Part 1:\n\n- A locality is found within the suburb 🙂",
+            "author": "hongxun",
+            "hints": [],
+            "points": 60,
+            "solves": 45,
+            "flag": "IRS{3_HUNTERRD_BALMORAL_2088_2}"
+        },
+        {
+            "name": "A Wealth of Information Part 1",
+            "description": "Found this [picture](https://drive.google.com/uc?id=1YymGZ_5s4Yx1t5gPaJItm7s7_hlITxfs&export=download) from somewhere, and NOW it's YOUR TURN to find something out from it!\n\nTell me:\n\n*A*. Name of the Camera Brand (in PascalCase)\n\n*B*. The Aperture of the Camera (include \"f/\")\n\n*C*. Focal length of the lens (include units without space)\n\n*D*. Is the flash on or off (ON/OFF)\n\n*E*. Date at which this picture was taken (DDMMYY)\n\n*F*. Is the place above or below sea level (ABOVE/BELOW)\n---\nSubmit the flag as follows:\n\nIRS{*A*_*B*_*C*_*D*_*E*_*F*}",
+            "author": "xzy_10",
+            "hints": [
+                "It's frankly surprisng as to the amount of information that a camera inputs into an image the moment it was captured. How would you view it?"
+            ],
+            "points": 69,
+            "solves": 45,
+            "flag": "IRS{Apple_f/1.6_5.1mm_OFF_161021_ABOVE}"
+        },
+        {
+            "name": "We go way back",
+            "description": "My old friends created an app and made a public presentation about it, but they changed the name to something stupid and wont tell me the old one. Could you help me find the old name?\n\nI managed to get the [google slides](https://docs.google.com/presentation/d/1gXGdoVw9X2YxEdyfTn6Lz0sbmuzCYs8H9zd1EOlJHL4/edit#slide=id.p) they used when creating the slides\n\nFlag format: IRS{*APPNAME*}\n\n**A first blood prize of one (1) 500¥ coin is available for this challenge.** (note: delivery time may be significant)",
+            "author": "bryanbryanbryanbryan",
+            "hints": [],
+            "points": 85,
+            "solves": 28,
+            "flag": "IRS{IHungry}"
+        },
+        {
+            "name": "A Wealth of Information Part 2",
+            "description": "Where was I?\n---\nSubmit the flag as follows:\n\nIRS{*A*_ROUTE_*X*_*B*} without any spacing and all capitals, copying \"ROUTE\" as is.\n\nWhere:\n\nA = Postal code of the nearest visitor centre\n\nB = Name of the closest building to the place\n\nX = The name of the route/road",
+            "author": "xzy_10",
+            "hints": [],
+            "points": 243,
+            "solves": 24,
+            "flag": "IRS{589333_ROUTE_2_TELECOM}"
+        },
+        {
+            "name": "\"The Sieberr\" Heist Part 3",
+            "description": "Alright, there are some new developments and I need your help again.\n\nThe guy's name is Casrihms Myrert, you can find him on social media.\n\nHe's going to a hospital to visit someone's kid, but we hear that there is another person that he will be visiting in the same hospital. This other person is of interest to us.\n\nLet me know what hospital he is going to, as well as what bus he is taking.\n---\nSubmit the flag as IRS{*A*_*B*_*C*}\n\nA. Bus route number *(any letter should be in capitals)*\n\nB. Destination of the bus route that the bus is heading to *(without any spacing and in all capitals)*\n\nC. Name of the hospital that our guy is going to *(without any spacing and in all capitals)*",
+            "author": "hongxun",
+            "hints": [],
+            "points": 286,
+            "solves": 12,
+            "flag": "IRS{B1_MONAVALE_MONAVALEHOSPITAL}"
+        },
+        {
+            "name": "\"The Sieberr\" Heist Part 2",
+            "description": "We retrieved this photo from the person's phone.\n\nHow did we get it? You don't need to know, don't be silly and ask too many questions.\n\nAnyway, the IT team commented that the guy seemed particularly interested in this photo. Unfortunately though, they were not able to find more info.\n\nTell me as much information as you can deduce from this photo.\n---\nSubmit the flag as IRS{*A*_*B*_*C*_*D*_*E*_*F*}\nwhere:\n\nA. Name of the street that the photo was taken on *(without any spacing and in all capitals)* [e.g. If the road name is \"John Rd\", input as \"JOHNRD\"; \"John St\" > \"JOHNST\"]\n\nB. Name of the cross street *(without any spacing and in all capitals)* [e.g. If the road name is \"John Rd\", input as \"JOHNRD\"; \"John St\" > \"JOHNST\"]\n\nC. Bus manufacturer *(without any spacing and in all capitals)*\n\nD. Bus model *(without any spacing and in all capitals)*\n\nE. Bus route number *(any letter should be in capitals)*\n\nF. Destination of the bus route that the bus is heading to *(without any spacing and in all capitals)*\n\n[the_sieberr_heist_part2.png](https://drive.google.com/uc?id=1wWRyMCzW7iLMf73hFHahdmvtwqce9NlU&export=download)",
+            "author": "hongxun",
+            "hints": [],
+            "points": 333,
+            "solves": 22,
+            "flag": "IRS{YORKST_DRUITTST_VOLVO_B12BLEA_BONDIJUNCTION}"
+        },
+        {
+            "name": "Public Transport Hunt",
+            "description": "My friend stole my $10 book voucher and camera away and took these [pictures](https://drive.google.com/uc?id=118gSQvIpzGt5CtCxNcbYD_89eZvpuAc4&export=download) of bus stops and train stations...\n\nI have absolutely no idea where he is now.\n\nHelp me trace the sly path of his scheming thievery and get my voucher back!\n\nYou might even get the voucher if you are fast enough...\n---\nSubmit the flag as IRS{*A*_*B*_*C*}\n\nWhere:\n\nA = Bus stop code of the bus stop he was at in the first image\n\nB = MRT station code (include line code without spacing) in the second image\n\nC = Postal code of the building right beside the bus stop he was at in the third image\n\n**A first blood prize of one $10 POPULAR/Kinokuniya voucher is available for this challenge.**",
+            "author": "xzy_10",
+            "hints": [],
+            "points": 380,
+            "solves": 21,
+            "flag": "IRS{22599_EW27_609961}"
+        }
+    ],
+    "web": [
+        {
+            "name": "[Part 1] FUTURE TECHNOLOGIES AI IOT FOURTH INDUSTRIAL REVOLUTION SECURITY CAMERA",
+            "description": "In our recent investigations, Siebersec got hold of a\n\n***FUTURE TECHNOLOGIES AI IOT FOURTH INDUSTRIAL REVOLUTION SECURITY CAMERA*** .\n\nWe suspect that it's yet another one of those vulnerable IoT devices with a web interface that's basically asking to be attacked.\n\nTry logging in as a camera viewer.\n\n[http://challs.sieberrsec.tech:4896](http://challs.sieberrsec.tech:4896)",
+            "author": "theoleecj",
+            "hints": [],
+            "points": 62,
+            "solves": 44,
+            "flag": "IRS{w4y_t00_eZ_1nJ3c710n}"
+        },
+        {
+            "name": "[Part 2] FUTURE TECHNOLOGIES AI IOT FOURTH INDUSTRIAL REVOLUTION SECURITY CAMERA",
+            "description": "In our recent investigations, Siebersec got hold of a\n\n***FUTURE TECHNOLOGIES AI IOT FOURTH INDUSTRIAL REVOLUTION SECURITY CAMERA*** .\n\nI think that the camera is intentionally pointed away from something we need to see.\n\nFind a way to rotate the camera (pan the camera) and let us see more things.\n\n[http://challs.sieberrsec.tech:4896](http://challs.sieberrsec.tech:4896)",
+            "author": "theoleecj",
+            "hints": [],
+            "points": 76,
+            "solves": 35,
+            "flag": "IRS{7h3_In73rn37_0f_vULn3erable_7hIng5}"
+        },
+        {
+            "name": "TaiYang IT Solution Part 1",
+            "description": "TaiYang IT Solution offers a variety of services, including one that is put behind a ***supposedly*** secure Google Log In. However, I heard that it uses... ***questionable*** validation code.\n\nLog in as the admin, and get the flag! Challenge is here: [http://challs.sieberrsec.tech:30593/](http://challs.sieberrsec.tech:30593/)\n\nSource provided: [http://dl.sieberrsec.tech/608fe2851fbf907e0b15c2cecdad5316886013b8581446af879ccaf6/sctf2021-jwt.7z](http://dl.sieberrsec.tech/608fe2851fbf907e0b15c2cecdad5316886013b8581446af879ccaf6/sctf2021-jwt.7z)\n\nYou'll need 7zip to open the archive. If you don't have it, [download it](https://www.7-zip.org/download.html).\n\n",
+            "author": "theoleecj",
+            "hints": [
+                "Open your browser's Developer Tools!",
+                "There are more easily-bypassable \"security\" measures hidden in the portal than the code might suggest."
+            ],
+            "points": 470,
+            "solves": 13,
+            "flag": "IRS{g00g13_s1gn_1n_d035nt_m3aN_y0uR3_sAf3}"
+        },
+        {
+            "name": "Exploring The Universe! (Part 1)",
+            "description": "Everyone knows about the big universe that surrounds us, where all of us use daily to retrieve latest information and hottest news from all over the world! It is of course, no other than, the one and only, Internet!\n\nTo access files and information on the Internet, we all use a protocol called Internet Protocol (IP). This facilitates locating resources throughout the entire network and finds the best way to the destination.\n\nCome on, its 2021! We are moving everything to the decentralised and distributed, away from all those central organisations! There are so many newer and very revolutionary protocols developed to share information on the web other than common protocols such as HTTPS and FTP.\n\nNow enough of introductions.\n\nAgent Myat is working on a university project to explore the massive decentralised universe and has some juicy information hidden there!\nHowever, he is being very tight-lipped about it and we only managed to get these information from him:\n\n`QmZ15yK5GE7gKzKSNC2yj9nLWwNH7sbgyyFcE8pSvzSLMQ`\n\n`k51qzi5uqu5dgrhngvuucsfv4mqmg8btaxhc8zg20ojwfpyl9gcb08ek4381it`\n\nLocate his hidden project and unveal his findings to everyone!",
+            "author": "willi123yao",
+            "hints": [],
+            "points": 479,
+            "solves": 7,
+            "flag": "IRS{1nT3rP1anet4rY_F1L3_sYs8emz}"
+        },
+        {
+            "name": "TaiYang IT Solution Part 2: Electric Boogaloo",
+            "description": "After the initial vulnerability disclosure, TaiYang IT Solution employed a new cybersecurity specialist to secure their systems which used Google Sign-In.\n\nThey were complaining about how their support staff would just login with the company Google Account to any website they received in their Inbox! How terrible!\n\nChallenge is here (part 2!): [http://challs.sieberrsec.tech:30593/](http://challs.sieberrsec.tech:30593/) (see Admin Panel Modern)\n\n*This challenge may require you to setup a Google Firebase Project.*\n\n*This challenge may require you to send emails (you could use Gmail, or Outlook, anything really).*\n\nSource provided: [http://dl.sieberrsec.tech/608fe2851fbf907e0b15c2cecdad5316886013b8581446af879ccaf6/sctf2021-jwt.7z](http://dl.sieberrsec.tech/608fe2851fbf907e0b15c2cecdad5316886013b8581446af879ccaf6/sctf2021-jwt.7z)\n\n^ source is slightly modified from original\n\n**A first blood prize of one (1) $10 GrabGifts Card is available for this challenge.**",
+            "author": "theoleecj",
+            "hints": [],
+            "points": 895,
+            "solves": 4,
+            "flag": "IRS{a77rac71ng_y0uR_aUD13nc3}"
+        }
+    ],
+    "forensics": [
+        {
+            "name": "Duck Delivery",
+            "description": "I ordered duck for dinner but all I got was an empty box! Can you help me find where it went?\n[DuckBox.jpg](https://drive.google.com/file/d/1R2UPgI_In6rRmSvafxLjzqpfP4jY3LQC/view?usp=sharing)",
+            "author": "ditzchann",
+            "hints": [
+                "Files can contain other files."
+            ],
+            "points": 77,
+            "solves": 34,
+            "flag": "IRS{H1dD3n_dUck}"
+        },
+        {
+            "name": "Birds?",
+            "description": "I can't help but feel that the birds are trying to tell me something...\n[suspiciousbirds.mp3](https://drive.google.com/file/d/1kFnY_osLBB9AEnnyYeZFCaowVXhrPLZL/view?usp=sharing)",
+            "author": "ditzchann",
+            "hints": [
+                "you may want to google for other instances of mp3 files in CTFs"
+            ],
+            "points": 114,
+            "solves": 30,
+            "flag": "IRS{s0m3Th1n9_5ouNDs_w3iRd}"
+        },
+        {
+            "name": "Digging In The Dump Pt. I",
+            "description": "Our friend, Alex, used to visit a website, but ever since his computer died the url to the website was lost!\nThe only hope now lies in his old hard drive, which was salvaged from his pc\nHopefully something useful can be found\n\nHere is a dump of his %APPDATA% folder\nCan you help him find the website?\n[Download Link](http://dl.sieberrsec.tech/08c7d9ff90b7ad86214f020394612af2394e0b28fb73e93d1beaa34e/AppData.zip)",
+            "author": "taiz2000",
+            "hints": [
+                "You might want to use a SQLite Browser"
+            ],
+            "points": 266,
+            "solves": 31,
+            "flag": "IRS{D1ggiNg_1N_tH3_chR0M3_h15t0rY}"
+        },
+        {
+            "name": "Digging In The Dump Pt. II",
+            "description": "After finding that website, perhaps you can find the saved credentials to login to his account?\n(Using the same file in Pt. I)\n\nComputer username: `Alex`\nComputer password: `Password1`\n(These are NOT the login credentials for the website)\n\nThis challenge is eligible for First Blood prize worth $10, contact @Taiz2000 on Discord if you first blood this challenge.",
+            "author": "taiz2000",
+            "hints": [],
+            "points": 292,
+            "solves": 9,
+            "flag": "IRS{aL1_uR_p45sw0rD_4r3_b3LOnG_t0_u5}"
+        },
+        {
+            "name": "Mind Cracking Adversity",
+            "description": "My thumbdrive got corrupted and all I have left of my /saves folder is this [world](https://drive.google.com/u/0/uc?id=1xb61Dac98oTIPMOjYnK0C7PY-nfwIblQ&export=download) here...\n\nHelp me find out what I built inside!\n\nNote: If you are unable to see the words clearly, open a ticket and show a proof that you found it.",
+            "author": "xzy_10",
+            "hints": [],
+            "points": 299,
+            "solves": 4,
+            "flag": "IRS{M1N3VI3W3R}"
+        },
+        {
+            "name": "Exploring The Universe! (Part 2)",
+            "description": "Oh noes! It seems like Agent Myat has some rather fun teammates, and theres something they're trying to hide!\n\nLook for the clues and try to uncover what he has been doing lately.\n\nRemember, nothing is really deleted on the Internet.\n\n**First blood prize for this challenge is either 1 month Spotify Premium or $10 Starbucks eGift**",
+            "author": "willi123yao",
+            "hints": [],
+            "points": 382,
+            "solves": 5,
+            "flag": "IRS{G3TT1NG-G00D-1S-the-WAY-T0-5UCC35S!}"
+        },
+        {
+            "name": "plush, lush, flush, blush",
+            "description": "ok so there's this plush that i really want from pokemon centre but there's no more physical stock left. :(\nso, i had it delivered in paper mario style instead!\n[can you find the hidden message?](https://drive.google.com/uc?id=1V_iJCuBS7jTWICh3qxwJwdEChyh4mAzq&export=download)",
+            "author": "xzy_10",
+            "hints": [],
+            "points": 688,
+            "solves": 7,
+            "flag": "IRS{plu5h_15_f1u5h_0n_th3_gr0und}"
+        }
+    ],
+    "misc": [
+        {
+            "name": "Heads and Tails Part 1",
+            "description": "![](https://i.imgur.com/wb9ixch.png)\n\nGet the ***Heads and Tails***\nthen you **win**!\n\n[heads_and_tails_part1.jpg](https://drive.google.com/uc?id=1cGCXeXE6tVDQQ1lbrQzZKO48h9kknleK&export=download)",
+            "author": "hongxun",
+            "hints": [],
+            "points": 50,
+            "solves": 50,
+            "flag": "IRS{Got_Head_Got_Tail_YAY_Y0u_W1nnEd_tH1S_G4m3!}"
+        },
+        {
+            "name": "Heads and Tails Part 2",
+            "description": "Again..! But it seems that it's **heads** to win this time. (and a 50-cent coin)\n\n[heads_and_tails_part2.jpg](https://drive.google.com/uc?id=1CYDspO2-x04B866SDfFb5RVgY9czFUtV&export=download)",
+            "author": "hongxun",
+            "hints": [],
+            "points": 73,
+            "solves": 37,
+            "flag": "IRS{w0w_you_aRe_a_proed_4t_tH1s}"
+        },
+        {
+            "name": "Heads and Tails Part 3",
+            "description": "Yet again..! (this time with a dollar coin)\n\nIf you finish this, I will give you a GIFt :)\n\n[heads_and_tails_part3.jpg](https://drive.google.com/uc?id=1b_SeVviqcV2tVr-gRu1lgOgUbJew7Mj2&export=download)",
+            "author": "hongxun",
+            "hints": [
+                "46 69 6C 65 20 73 69 67 6E 61 74 75 72 65 73"
+            ],
+            "points": 163,
+            "solves": 25,
+            "flag": "IRS{a_cLOwN_H1dd3N_aT_Le_T4iL}"
+        },
+        {
+            "name": "Can You Math It?",
+            "description": "Can you solve 100 math equations?\n\nWhat if you only have 5 seconds to solve each?\n\nServer source code available [here](http://dl.sieberrsec.tech/98756fb6a159147b590437ac13ec5b98a9de9b44945b76a0c4384600/Can%20You%20Math%20It.py)\n\n[This is a scripting challenge. You are expected to write a script to solve it.]\n\nConnect to the challenge at `nc challs.sieberrsec.tech 29079`",
+            "author": "taiz2000",
+            "hints": [
+                "Don't try to do it by hand. Don't."
+            ],
+            "points": 313,
+            "solves": 25,
+            "flag": "IRS{4f2cd85d0a9f32f4}"
+        },
+        {
+            "name": "I lost my anime collection! Pt. II",
+            "description": "One of the drives on my computer just went missing!\nIt's definitely still in my computer, but I can't find it anywhere in Windows\nCan you help me again?\n[Download Link](http://dl.sieberrsec.tech/5b1a1d016fb842ad18bf20b3813649a0038f6971dac37d6100ca181b/I%20lost%20my%20anime%20collection%21%20Pt.%20II.zip)\n\nThis challenge is eligible for First Blood prize worth $10, contact @Taiz2000 on Discord if you first blood this challenge.",
+            "author": "taiz2000",
+            "hints": [],
+            "points": 398,
+            "solves": 4,
+            "flag": "IRS{b4D_p4rT1tION_tAb13}"
+        },
+        {
+            "name": "I lost my anime collection! Pt. I",
+            "description": "One of the hard drives in my NAS just died!\nI heard that it's in RAID 5, whatever that means..\nCan you help me recover my beloved files?\nHere's the remaining drives\n[Download](http://dl.sieberrsec.tech/c5284026f68163625f8e3afeec4529316a6b15f89f971d58e6d39c24/I%20lost%20my%20anime%20collection%21%20Pt.%20I.zip)",
+            "author": "taiz2000",
+            "hints": [
+                "You might want to use VMWare Player. It's free!",
+                "A consumer version of Windows can't read RAID 5!"
+            ],
+            "points": 500,
+            "solves": 2,
+            "flag": ""
+        },
+        {
+            "name": "rock farming simulator deluxe edition",
+            "description": "*DLC unlocked: pony pathfinding & more!*\n\n`ssh -p 33251 rock_farming_simulator@challs.sieberrsec.tech`",
+            "author": "main",
+            "hints": [],
+            "points": 600,
+            "solves": 0,
+            "flag": ""
+        }
+    ],
+    "sanity": [
+        {
+            "name": "sanity check",
+            "description": "🤔",
+            "author": "main",
+            "hints": [],
+            "points": 50,
+            "solves": 58,
+            "flag": "IRS{th@nk_y0u_for_r3ading!}"
+        }
+    ]
+}
