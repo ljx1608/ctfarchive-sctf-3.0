@@ -6,6 +6,8 @@ Challenges were archived after the CTF from [ctfx.sieberrsec.tech](https://ctfx.
 
 Writeups are available [here]().
 
+---
+
 [PWN](#pwn)
 
 - [simple](#simple)
@@ -1073,4 +1075,3 @@ Flag: IRS{th@nk_y0u_for_r3ading!}
 #### Description
 
 > 🤔
-

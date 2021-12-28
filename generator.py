@@ -6,7 +6,7 @@ r = re.compile(r"[^a-zA-Z0-9-]")
 challengesj = open("challenges.json")
 challenges = json.load(challengesj)
 with open("README.md", "a") as f:
-    f.write("\n")
+    f.write("\n---\n\n")
 
     for cat in challenges:
         f.write(f"[{cat.upper()}](#{cat})\n\n")
