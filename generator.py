@@ -11,7 +11,7 @@ with open("README.md", "a") as f:
             )
         f.write("\n")
 
-    f.write("---")
+    f.write("---\n\n")
 
     for cat in challenges:
         f.write(f"## {cat.upper()}\n\n")
