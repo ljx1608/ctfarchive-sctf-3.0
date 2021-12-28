@@ -1,14 +1,18 @@
 import json
+import re
+
+r = re.compile(r"[^a-zA-Z0-9-]")
 
 challengesj = open("challenges.json")
 challenges = json.load(challengesj)
 with open("README.md", "a") as f:
+    f.write("\n")
+
     for cat in challenges:
         f.write(f"[{cat.upper()}](#{cat})\n\n")
         for challenge in challenges[cat]:
-            f.write(
-                f"- [{challenge['name']}](#{challenge['name'].replace(' ', '-')})\n"
-            )
+            id = r.sub("", challenge["name"].replace(" ", "-")).lower()
+            f.write(f"- [{challenge['name']}](#{id})\n")
         f.write("\n")
 
     f.write("---\n\n")
