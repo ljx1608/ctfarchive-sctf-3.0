@@ -88,10 +88,46 @@ Flag: IRS{W377_D0NE_40U_G3N1u5_WBVAVEF}
 #### Description
 
 > Simple game right?
-> 
+>
 > `nc challs.sieberrsec.tech 8862`
+>
+> ```c
+> #include <stdio.h>
+> #include <stdlib.h>
 > 
-> [SOURCE CODE]
+> // cc simple.c -o simple -fstack-protector-all
+> int main(void)
+> {
+> 	puts("Want a flag? Just play until you win!");
+> 	puts("Goal: Become a billionaire!");
+> 	int account_value = 1000000;
+> 	while (account_value < 1000000000) {
+> 		printf("\nAccount value: $%d\n", account_value);
+> 		puts("Commands:");
+> 		puts("1. Withdraw money");
+> 		puts("2. Deposit money");
+> 		printf("Choose an option [1/2]: ");
+> 		int option = 0;
+> 		scanf("%d", &option);
+> 		while (option != 1 && option != 2) {
+> 			puts("Invalid option!");
+> 			printf("Choose an option [1/2]: ");
+> 			scanf("%d", &option);
+> 		}
+> 		if (option == 1) {
+> 			printf("Amount to withdraw: ");
+> 			int withdrawal = 0;
+> 			scanf("%d", &withdrawal);
+> 			account_value -= withdrawal;
+> 		} else {
+> 			puts("LOL no you are not allowed to deposit money. :(");
+> 		}
+> 	}
+> 	printf("\nAccount value: $%d\n", account_value);
+> 	system("cat flag");
+> 	return 0;
+> }
+> ```
 
 ### warmup
 
@@ -104,9 +140,26 @@ Flag: IRS{nU1L_t3rminat0r}
 #### Description
 
 > Just a warmup. `nc challs.sieberrsec.tech 3476`
-> 
-> [SOURCE CODE]
-> 
+>
+> ```c
+> #include <stdio.h>
+> int main() {
+>     char input[32];
+>     char flag[32];
+>     // read flag file
+>     FILE *f = fopen("flag", "r");
+>     fgets(flag, 32, f);
+>     fclose(f);
+>     // read the user's guess
+>     fgets(input, 0x32, stdin);
+>     // if user's guess matches the flag
+>     if (!strcmp(flag,input)) {
+>         puts("Predicted!");
+>         system("cat flag");
+>     } else puts("Your flag was wrong :(");
+> }
+> ```
+>
 > N.B. please do not try to bruteforce the flag. Attempts at doing so will be taken as an attack on server infrastructure, and will leave you liable for disqualification.
 
 Hint 1: https://ctf101.org/binary-exploitation/buffer-overflow/
@@ -124,10 +177,60 @@ Flag:
 #### Description
 
 > Can you somehow get the flag? Have fun!
-> 
+>
 > `nc challs.sieberrsec.tech 1470`
+>
+> ```c
+> #include <unistd.h>
 > 
-> [SOURCE CODE]
+> #include <stdio.h>
+> #include <stdlib.h>
+> 
+> // cc malloc.c -o malloc -fstack-protector-all
+> int main(void)
+> {
+> 	// Variables
+> 	int *arr; // int pointer to an array
+> 	char *msg; // C-string to store your message
+> 	size_t length = 0;
+> 	
+> 	// Welcome message
+> 	puts("Welcome to Sieberrsec CTF!");
+> 	
+> 	// Allocates 123456 bytes of memory
+> 	arr = (int *)malloc(123456);
+> 	
+> 	// Sets first element of arr to 1
+> 	arr[0] = 1;
+> 	
+> 	// Leaks the memory address of arr
+> 	printf("Leak: %p\n", arr);
+> 	
+> 	// Gets length of your message
+> 	printf("Length of your message: ");
+> 	scanf("%lu", &length);
+> 	
+> 	// Allocates memory to store your message as a C-string
+> 	// +1 is to store the null-byte that ends the string
+> 	msg = malloc(length + 1);
+> 	
+> 	// Reads length bytes of input into msg
+> 	printf("Enter your message: ");
+> 	read(0, msg, length);
+> 	
+> 	// Null-byte to end the string
+> 	msg[length] = 0;
+> 	
+> 	// Write length bytes from msg
+> 	write(1, msg, length);
+> 	
+> 	// Your goal: somehow make arr[0] == 0
+> 	if (arr[0] == 0) {
+> 		system("cat flag");
+> 	}
+> 	return 0;
+> }
+> ```
 
 ### rock farm simulator 2011
 
@@ -210,8 +313,15 @@ Flag: IRS{secrets_are_revealed!!}
 #### Description
 
 > We found the frontend code for a remote encryption service at `nc challs.sieberrsec.tech 3477`:
-> 
-> [SOURCE CODE]
+>
+> ```python
+> import turbofastcrypto # The source code for this module is only available for part 2 of this challenge :)
+> while 1:
+>     plaintext = input('> ')
+>     ciphertext = turbofastcrypto.encrypt(plaintext)
+>     print('Encrypted: ' + str(ciphertext))
+> ```
+>
 > My partner says it operates under the hood with "[XOR](https://en.wikipedia.org/wiki/Exclusive_or)", whatever that means. I need you to recover the key.
 
 Hint 1: Reset the connection if you're having trouble.
@@ -267,12 +377,26 @@ Flag:
 #### Description
 
 > In hindsight, rolling my own crypto was a rather stupendous stroke of stupidity. I'll be switching to a [well-known, verified library](https://www.pycryptodome.org/en/latest/) to fix this.
+>
+> ```python
+> from Crypto.Util.Padding import pad,unpad
+> from Crypto.Cipher import AES
+> import os
 > 
-> [SOURCE CODE]
+> with open("flag", 'rb') as f: flag = f.read().strip()
+> key = os.urandom(16)
+> 
+> while 1:
+>     pt = input('> ').encode()
+>     padded = pad(pt+flag, AES.block_size)
+>     cipher = AES.new(key, AES.MODE_ECB)
+>     print(cipher.encrypt(padded).hex())
+> ```
+>
 > `nc challs.sieberrsec.tech 31311`
-> 
+>
 > **A first blood prize of one (1) month of Discord Nitro is available for this challenge.**
-> 
+>
 > Some amount of "bruteforce" will be necessary -- and hence legal -- for this challenge.
 
 Hint 1: You should search for ECB related AES crypto CTF problems; this is a rather common newbie challenge
