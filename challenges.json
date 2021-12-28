@@ -45,7 +45,7 @@
         },
         {
             "name": "Turbo Fast Crypto, part 2",
-            "description": "Using the key you extracted, we found a (link)[https://drive.google.com/uc?id=19mmImjpreALZSs0D88BtLY65cFBkHsMC&export=download] to the source code for turbofastcrypto. There happens to be a secret flag file on the server, and you need to extract it.\n\n**A first blood prize of one (1) month of Discord Nitro is available for this challenge.**\n\n(the target server is the same as part 1)",
+            "description": "Using the key you extracted, we found a [link](https://drive.google.com/uc?id=19mmImjpreALZSs0D88BtLY65cFBkHsMC&export=download) to the source code for turbofastcrypto. There happens to be a secret flag file on the server, and you need to extract it.\n\n**A first blood prize of one (1) month of Discord Nitro is available for this challenge.**\n\n(the target server is the same as part 1)",
             "author": "main",
             "hints": [
                 "find a way to execute print_flag()",
@@ -180,7 +180,7 @@
     "osint": [
         {
             "name": "\"The Sieberr\" Heist Part 1",
-            "description": "Well, boss instructed me not to reveal much, but we're planning some heist and I need your help.\n\nOne of our men tailed someone to their home quite a while back.\n\nHe discreetly took a quick picture to mark the location of the person's house.\n\nPlease help me determine the location.\n\n*(Actually, the heist was planned to be carried out sometime then, but due to unforeseen circumstances it was delayed and we are now revisiting the resources we had obtained back then).*\n---\nSubmit the flag as IRS{*A*_*B*_*C*_*D*_*E*}\nwhere:\n\nA. Unit Number *(without any spacing and numbers only)*\n\nB. Street Name *(without any spacing and in all capitals)* [e.g. If the road name is \"John Rd\", input as \"JOHNRD\"; \"John St\" > \"JOHNST\"]\n\nC. Locality Name *(without any spacing and in all capitals)*\n\nD. Postcode *(numbers only)*\n\nE. Number of Storeys of the House *(without any spacing and numbers only)*\n\n[the_sieberr_heist_part1.jpg](https://drive.google.com/uc?id=12OAxXXD9aIKnHIffOnKPaoIymXkmiUoc&export=download)\n---\nAddendum for \"The Sieberr\" Heist Part 1:\n\n- A locality is found within the suburb 🙂",
+            "description": "Well, boss instructed me not to reveal much, but we're planning some heist and I need your help.\n\nOne of our men tailed someone to their home quite a while back.\n\nHe discreetly took a quick picture to mark the location of the person's house.\n\nPlease help me determine the location.\n\n*(Actually, the heist was planned to be carried out sometime then, but due to unforeseen circumstances it was delayed and we are now revisiting the resources we had obtained back then).*\n\n---\n\nSubmit the flag as IRS{*A*\\_*B*\\_*C*\\_*D*\\_*E*}\nwhere:\n\nA. Unit Number *(without any spacing and numbers only)*\n\nB. Street Name *(without any spacing and in all capitals)* [e.g. If the road name is \"John Rd\", input as \"JOHNRD\"; \"John St\" > \"JOHNST\"]\n\nC. Locality Name *(without any spacing and in all capitals)*\n\nD. Postcode *(numbers only)*\n\nE. Number of Storeys of the House *(without any spacing and numbers only)*\n\n[the_sieberr_heist_part1.jpg](https://drive.google.com/uc?id=12OAxXXD9aIKnHIffOnKPaoIymXkmiUoc&export=download)\n\n---\n\nAddendum for \"The Sieberr\" Heist Part 1:\n\n- A locality is found within the suburb 🙂",
             "author": "hongxun",
             "hints": [],
             "points": 60,
@@ -189,7 +189,7 @@
         },
         {
             "name": "A Wealth of Information Part 1",
-            "description": "Found this [picture](https://drive.google.com/uc?id=1YymGZ_5s4Yx1t5gPaJItm7s7_hlITxfs&export=download) from somewhere, and NOW it's YOUR TURN to find something out from it!\n\nTell me:\n\n*A*. Name of the Camera Brand (in PascalCase)\n\n*B*. The Aperture of the Camera (include \"f/\")\n\n*C*. Focal length of the lens (include units without space)\n\n*D*. Is the flash on or off (ON/OFF)\n\n*E*. Date at which this picture was taken (DDMMYY)\n\n*F*. Is the place above or below sea level (ABOVE/BELOW)\n---\nSubmit the flag as follows:\n\nIRS{*A*_*B*_*C*_*D*_*E*_*F*}",
+            "description": "Found this [picture](https://drive.google.com/uc?id=1YymGZ_5s4Yx1t5gPaJItm7s7_hlITxfs&export=download) from somewhere, and NOW it's YOUR TURN to find something out from it!\n\nTell me:\n\n*A*. Name of the Camera Brand (in PascalCase)\n\n*B*. The Aperture of the Camera (include \"f/\")\n\n*C*. Focal length of the lens (include units without space)\n\n*D*. Is the flash on or off (ON/OFF)\n\n*E*. Date at which this picture was taken (DDMMYY)\n\n*F*. Is the place above or below sea level (ABOVE/BELOW)\n\n---\n\nSubmit the flag as follows:\n\nIRS{*A*\\_*B*\\_*C*\\_*D*\\_*E*\\_*F*}",
             "author": "xzy_10",
             "hints": [
                 "It's frankly surprisng as to the amount of information that a camera inputs into an image the moment it was captured. How would you view it?"
@@ -209,7 +209,7 @@
         },
         {
             "name": "A Wealth of Information Part 2",
-            "description": "Where was I?\n---\nSubmit the flag as follows:\n\nIRS{*A*_ROUTE_*X*_*B*} without any spacing and all capitals, copying \"ROUTE\" as is.\n\nWhere:\n\nA = Postal code of the nearest visitor centre\n\nB = Name of the closest building to the place\n\nX = The name of the route/road",
+            "description": "Where was I?\n\n---\n\nSubmit the flag as follows:\n\nIRS{*A*\\_ROUTE_*X*\\_*B*} without any spacing and all capitals, copying \"ROUTE\" as is.\n\nWhere:\n\nA = Postal code of the nearest visitor centre\n\nB = Name of the closest building to the place\n\nX = The name of the route/road",
             "author": "xzy_10",
             "hints": [],
             "points": 243,
@@ -218,7 +218,7 @@
         },
         {
             "name": "\"The Sieberr\" Heist Part 3",
-            "description": "Alright, there are some new developments and I need your help again.\n\nThe guy's name is Casrihms Myrert, you can find him on social media.\n\nHe's going to a hospital to visit someone's kid, but we hear that there is another person that he will be visiting in the same hospital. This other person is of interest to us.\n\nLet me know what hospital he is going to, as well as what bus he is taking.\n---\nSubmit the flag as IRS{*A*_*B*_*C*}\n\nA. Bus route number *(any letter should be in capitals)*\n\nB. Destination of the bus route that the bus is heading to *(without any spacing and in all capitals)*\n\nC. Name of the hospital that our guy is going to *(without any spacing and in all capitals)*",
+            "description": "Alright, there are some new developments and I need your help again.\n\nThe guy's name is Casrihms Myrert, you can find him on social media.\n\nHe's going to a hospital to visit someone's kid, but we hear that there is another person that he will be visiting in the same hospital. This other person is of interest to us.\n\nLet me know what hospital he is going to, as well as what bus he is taking.\n\n---\n\nSubmit the flag as IRS{*A*\\_*B*\\_*C*}\n\nA. Bus route number *(any letter should be in capitals)*\n\nB. Destination of the bus route that the bus is heading to *(without any spacing and in all capitals)*\n\nC. Name of the hospital that our guy is going to *(without any spacing and in all capitals)*",
             "author": "hongxun",
             "hints": [],
             "points": 286,
@@ -227,7 +227,7 @@
         },
         {
             "name": "\"The Sieberr\" Heist Part 2",
-            "description": "We retrieved this photo from the person's phone.\n\nHow did we get it? You don't need to know, don't be silly and ask too many questions.\n\nAnyway, the IT team commented that the guy seemed particularly interested in this photo. Unfortunately though, they were not able to find more info.\n\nTell me as much information as you can deduce from this photo.\n---\nSubmit the flag as IRS{*A*_*B*_*C*_*D*_*E*_*F*}\nwhere:\n\nA. Name of the street that the photo was taken on *(without any spacing and in all capitals)* [e.g. If the road name is \"John Rd\", input as \"JOHNRD\"; \"John St\" > \"JOHNST\"]\n\nB. Name of the cross street *(without any spacing and in all capitals)* [e.g. If the road name is \"John Rd\", input as \"JOHNRD\"; \"John St\" > \"JOHNST\"]\n\nC. Bus manufacturer *(without any spacing and in all capitals)*\n\nD. Bus model *(without any spacing and in all capitals)*\n\nE. Bus route number *(any letter should be in capitals)*\n\nF. Destination of the bus route that the bus is heading to *(without any spacing and in all capitals)*\n\n[the_sieberr_heist_part2.png](https://drive.google.com/uc?id=1wWRyMCzW7iLMf73hFHahdmvtwqce9NlU&export=download)",
+            "description": "We retrieved this photo from the person's phone.\n\nHow did we get it? You don't need to know, don't be silly and ask too many questions.\n\nAnyway, the IT team commented that the guy seemed particularly interested in this photo. Unfortunately though, they were not able to find more info.\n\nTell me as much information as you can deduce from this photo.\n\n---\n\nSubmit the flag as IRS{*A*\\_*B*\\_*C*\\_*D*\\_*E*\\_*F*}\nwhere:\n\nA. Name of the street that the photo was taken on *(without any spacing and in all capitals)* [e.g. If the road name is \"John Rd\", input as \"JOHNRD\"; \"John St\" > \"JOHNST\"]\n\nB. Name of the cross street *(without any spacing and in all capitals)* [e.g. If the road name is \"John Rd\", input as \"JOHNRD\"; \"John St\" > \"JOHNST\"]\n\nC. Bus manufacturer *(without any spacing and in all capitals)*\n\nD. Bus model *(without any spacing and in all capitals)*\n\nE. Bus route number *(any letter should be in capitals)*\n\nF. Destination of the bus route that the bus is heading to *(without any spacing and in all capitals)*\n\n[the_sieberr_heist_part2.png](https://drive.google.com/uc?id=1wWRyMCzW7iLMf73hFHahdmvtwqce9NlU&export=download)",
             "author": "hongxun",
             "hints": [],
             "points": 333,
@@ -236,7 +236,7 @@
         },
         {
             "name": "Public Transport Hunt",
-            "description": "My friend stole my $10 book voucher and camera away and took these [pictures](https://drive.google.com/uc?id=118gSQvIpzGt5CtCxNcbYD_89eZvpuAc4&export=download) of bus stops and train stations...\n\nI have absolutely no idea where he is now.\n\nHelp me trace the sly path of his scheming thievery and get my voucher back!\n\nYou might even get the voucher if you are fast enough...\n---\nSubmit the flag as IRS{*A*_*B*_*C*}\n\nWhere:\n\nA = Bus stop code of the bus stop he was at in the first image\n\nB = MRT station code (include line code without spacing) in the second image\n\nC = Postal code of the building right beside the bus stop he was at in the third image\n\n**A first blood prize of one $10 POPULAR/Kinokuniya voucher is available for this challenge.**",
+            "description": "My friend stole my $10 book voucher and camera away and took these [pictures](https://drive.google.com/uc?id=118gSQvIpzGt5CtCxNcbYD_89eZvpuAc4&export=download) of bus stops and train stations...\n\nI have absolutely no idea where he is now.\n\nHelp me trace the sly path of his scheming thievery and get my voucher back!\n\nYou might even get the voucher if you are fast enough...\n\n---\n\nSubmit the flag as IRS{*A*\\_*B*\\_*C*}\n\nWhere:\n\nA = Bus stop code of the bus stop he was at in the first image\n\nB = MRT station code (include line code without spacing) in the second image\n\nC = Postal code of the building right beside the bus stop he was at in the third image\n\n**A first blood prize of one $10 POPULAR/Kinokuniya voucher is available for this challenge.**",
             "author": "xzy_10",
             "hints": [],
             "points": 380,

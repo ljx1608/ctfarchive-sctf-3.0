@@ -276,7 +276,7 @@ Flag:
 
 #### Description
 
-> Using the key you extracted, we found a (link)[https://drive.google.com/uc?id=19mmImjpreALZSs0D88BtLY65cFBkHsMC&export=download] to the source code for turbofastcrypto. There happens to be a secret flag file on the server, and you need to extract it.
+> Using the key you extracted, we found a [link](https://drive.google.com/uc?id=19mmImjpreALZSs0D88BtLY65cFBkHsMC&export=download) to the source code for turbofastcrypto. There happens to be a secret flag file on the server, and you need to extract it.
 > 
 > **A first blood prize of one (1) month of Discord Nitro is available for this challenge.**
 > 
@@ -515,8 +515,10 @@ Flag: IRS{3_HUNTERRD_BALMORAL_2088_2}
 > Please help me determine the location.
 > 
 > *(Actually, the heist was planned to be carried out sometime then, but due to unforeseen circumstances it was delayed and we are now revisiting the resources we had obtained back then).*
+> 
 > ---
-> Submit the flag as IRS{*A*_*B*_*C*_*D*_*E*}
+> 
+> Submit the flag as IRS{*A*\_*B*\_*C*\_*D*\_*E*}
 > where:
 > 
 > A. Unit Number *(without any spacing and numbers only)*
@@ -560,10 +562,12 @@ Flag: IRS{Apple_f/1.6_5.1mm_OFF_161021_ABOVE}
 > *E*. Date at which this picture was taken (DDMMYY)
 > 
 > *F*. Is the place above or below sea level (ABOVE/BELOW)
+> 
 > ---
+> 
 > Submit the flag as follows:
 > 
-> IRS{*A*_*B*_*C*_*D*_*E*_*F*}
+> IRS{*A*\_*B*\_*C*\_*D*\_*E*\_*F*}
 
 Hint 1: It's frankly surprisng as to the amount of information that a camera inputs into an image the moment it was captured. How would you view it?
 
@@ -596,10 +600,12 @@ Flag: IRS{589333_ROUTE_2_TELECOM}
 #### Description
 
 > Where was I?
+> 
 > ---
+> 
 > Submit the flag as follows:
 > 
-> IRS{*A*_ROUTE_*X*_*B*} without any spacing and all capitals, copying "ROUTE" as is.
+> IRS{*A*\_ROUTE_*X*\_*B*} without any spacing and all capitals, copying "ROUTE" as is.
 > 
 > Where:
 > 
@@ -626,8 +632,10 @@ Flag: IRS{B1_MONAVALE_MONAVALEHOSPITAL}
 > He's going to a hospital to visit someone's kid, but we hear that there is another person that he will be visiting in the same hospital. This other person is of interest to us.
 > 
 > Let me know what hospital he is going to, as well as what bus he is taking.
+> 
 > ---
-> Submit the flag as IRS{*A*_*B*_*C*}
+> 
+> Submit the flag as IRS{*A*\_*B*\_*C*}
 > 
 > A. Bus route number *(any letter should be in capitals)*
 > 
@@ -652,8 +660,10 @@ Flag: IRS{YORKST_DRUITTST_VOLVO_B12BLEA_BONDIJUNCTION}
 > Anyway, the IT team commented that the guy seemed particularly interested in this photo. Unfortunately though, they were not able to find more info.
 > 
 > Tell me as much information as you can deduce from this photo.
+> 
 > ---
-> Submit the flag as IRS{*A*_*B*_*C*_*D*_*E*_*F*}
+> 
+> Submit the flag as IRS{*A*\_*B*\_*C*\_*D*\_*E*\_*F*}
 > where:
 > 
 > A. Name of the street that the photo was taken on *(without any spacing and in all capitals)* [e.g. If the road name is "John Rd", input as "JOHNRD"; "John St" > "JOHNST"]
@@ -688,7 +698,7 @@ Flag: IRS{22599_EW27_609961}
 > 
 > You might even get the voucher if you are fast enough...
 > ---
-> Submit the flag as IRS{*A*_*B*_*C*}
+> Submit the flag as IRS{*A*\_*B*\_*C*}
 > 
 > Where:
 > 
