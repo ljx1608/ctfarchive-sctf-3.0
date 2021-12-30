@@ -6,6 +6,8 @@ Challenges were archived after the CTF from [ctfx.sieberrsec.tech](https://ctfx.
 
 Writeups are available [here](https://ljx1608.tk/ctf-writeups/sctf-3.0).
 
+Official archive [here](https://github.com/IRS-Cybersec/Sieberrsec-CTF-3.0).
+
 ---
 
 [PWN](#pwn)
