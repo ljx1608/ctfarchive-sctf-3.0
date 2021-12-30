@@ -532,7 +532,9 @@ Flag: IRS{3_HUNTERRD_BALMORAL_2088_2}
 > E. Number of Storeys of the House *(without any spacing and numbers only)*
 > 
 > [the_sieberr_heist_part1.jpg](https://drive.google.com/uc?id=12OAxXXD9aIKnHIffOnKPaoIymXkmiUoc&export=download)
+> 
 > ---
+> 
 > Addendum for "The Sieberr" Heist Part 1:
 > 
 > - A locality is found within the suburb 🙂
@@ -697,7 +699,9 @@ Flag: IRS{22599_EW27_609961}
 > Help me trace the sly path of his scheming thievery and get my voucher back!
 > 
 > You might even get the voucher if you are fast enough...
+> 
 > ---
+> 
 > Submit the flag as IRS{*A*\_*B*\_*C*}
 > 
 > Where:
