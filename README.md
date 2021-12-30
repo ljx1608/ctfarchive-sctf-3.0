@@ -4,7 +4,7 @@ Challenges were archived after the CTF from [ctfx.sieberrsec.tech](https://ctfx.
 
 *Note: Some files are split into mutliple smaller files due to GitHub's file size limit, reassemble in 7-Zip using `Combine files...` or `cat filename.zip.* > filename.zip`.*
 
-Writeups are available [here]().
+Writeups are available [here](https://ljx1608.tk/ctf-writeups/sctf-3.0).
 
 ---
 
